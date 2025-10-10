@@ -1,0 +1,227 @@
+* {margin: 0;padding: 0;box-sizing: border-box;}
+html {  scroll-behavior: smooth;}
+body {font-family: 'Poppins', sans-serif;background: #ffffff;color: #333;position: relative;}
+
+/* HEADER */
+header {background: #fff;color: #000000;
+  position: sticky;top: 0;
+  z-index: 100;}
+.head-container {max-width: 1200px;width: 90%;margin: 0 auto;
+  display: flex;justify-content: space-between;align-items: center;
+  padding: 20px 0;height: 10vh;}
+.head-container h1 {font-family: 'Merriweather', serif;font-size: 2rem;letter-spacing: 2px;}
+
+nav {display: flex;}
+nav ul {list-style: none;display: flex;gap: 35px;align-items: center;}
+nav ul li a.links {position: relative;text-decoration: none;
+  color: #373125;font-weight: 500;font-size: 1.1rem;}
+nav ul li a.links::after {content: "";position: absolute;
+  left: 0;bottom: -5px;width: 0;height: 2px;background: #3a67eb;
+  transition: width 0.3s;}
+nav ul li a.links:hover::after {width: 100%;}
+.contact-btn { height: 40px; width: 120px; background-color: #040404; color: #fff;
+  font-size: 14px;font-weight: 500;text-align: center;
+  line-height: 40px; border-radius: 25px; text-decoration: none; }
+
+/* SHOWCASE */
+.showcase {background: url('jampil.jpg') no-repeat center center/cover;
+  max-width: 1450px; height: 85vh;color: #fff;position: relative;margin: 0 auto;border-radius: 35px;}
+
+.showcase-container {
+  width: 50%; 
+  height: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.showcase-child {
+  width: 70%;
+  padding: 40px;
+  border-radius: 15px;
+}
+
+.showcase-container h3 {
+  font-size: 18px;
+  letter-spacing: 1px;
+  color: #ffffff;
+  text-shadow: 4px 4px 8px rgba(27, 76, 142, 0.773);
+  margin-bottom: -5px;
+}
+
+.showcase-container h1 {
+  font-size: 55px;
+  line-height: 1.2;
+  font-weight: 700;
+  color: #ffffff;
+  text-shadow: 4px 4px 8px rgba(27, 76, 142, 0.773);
+  margin-bottom: 30px;
+  margin-top: 0px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 28px;
+  background: #004ecb;
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 30px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #0056b3;
+}
+
+.popular-destination {
+  width: 90%;
+  margin: 60px auto;
+  text-align: center;
+}
+
+.destination-header h2 {
+  font-size: 32px;
+  color: #222;
+  margin-bottom: 8px;
+}
+
+.destination-header p {
+  color: #777;
+  margin-bottom: 40px;
+}
+
+.destination-cards {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.destination-card {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  width: 300px;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.destination-card:hover {
+  transform: translateY(-10px);
+}
+
+.destination-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.destination-card h3 {
+  margin: 15px 0 5px;
+  font-size: 18px;
+  color: #222;
+}
+
+.destination-card p {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.rating {
+  position: absolute;
+  bottom: 105px;
+  right: 10px;
+  background: #007bff;
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.658);
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.journey-section {
+  text-align: center;
+  padding: 60px 20px;
+  background: #fff;
+}
+
+.journey-header h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+.journey-header p {
+  font-size: 15px;
+  color: #555;
+  max-width: 600px;
+  margin: 0 auto 50px;
+}
+
+.journey-cards {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end; /* aligns side cards at the bottom */
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.journey-card {
+  background: #f8f9fc;
+  width: 280px;
+  height: 300px; /* default height for side cards */
+  border-radius: 20px;
+  padding: 30px 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  transition: 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.journey-card.active {
+  background: #007bff;
+  color: #fff;
+  height: 420px; /* taller center card */
+  transform: translateY(-10px);
+}
+
+.journey-card.active h3,
+.journey-card.active p {
+  color: #fff;
+}
+
+.journey-card .icon {
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+
+.journey-card h3 {
+  font-size: 18px;
+  color: #222;
+  font-weight: 600;
+}
+
+.journey-card p {
+  font-size: 14px;
+  color: #666;
+  margin: 15px 0;
+  line-height: 1.5;
+}
+
+.learn-more {
+  color: #fff;
+  font-weight: 500;
+  text-decoration: underline;
+  font-size: 14px;
+}
+
+
+
