@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Summary | AirLines</title>
+  <style>
+    body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* Progress bar */
+    .progress-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 40px;
+    }
+
+    .step {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 150px;
+      text-align: center;
+    }
+
+    .circle {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: #0d8ecf;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+    }
+
+    .label {
+      margin-top: 10px;
+      color: #0d8ecf;
+      font-weight: 600;
+    }
+
+    .line {
+      height: 3px;
+      width: 100px;
+      background-color: #e0e0e0;
+    }
+
+    .inactive .circle {
+      background-color: #e0e0e0;
+    }
+
+    .inactive .label {
+      color: #999;
+    }
+
+    /* Summary Card */
+    .summary-container {
+      background: #fff;
+      padding: 30px 40px;
+      border-radius: 16px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      margin-top: 40px;
+      width: 600px;
+    }
+
+    .summary-container h2 {
+      text-align: center;
+      color: #0d8ecf;
+      margin-bottom: 20px;
+    }
+
+    .section {
+      margin-bottom: 20px;
+    }
+
+    .section h3 {
+      color: #0d8ecf;
+      border-bottom: 2px solid #e0e0e0;
+      padding-bottom: 5px;
+      margin-bottom: 10px;
+    }
+
+    .info-item {
+      margin: 4px 0;
+      font-size: 14px;
+      color: #555;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      background-color: #0d8ecf;
+      color: white;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+      margin-top: 10px;
+    }
+
+    button:hover {
+      background-color: #0b7ab1;
+    }
+
+    @media (max-width: 480px) {
+      .summary-container {
+        width: 90%;
+        padding: 20px;
+      }
+
+      .progress-container {
+        flex-direction: column;
+      }
+
+      .line {
+        width: 3px;
+        height: 40px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Progress bar -->
+  <div class="progress-container">
+    <div class="step inactive">
+      <div class="circle">1</div>
+      <div class="label">Booking Details</div>
+    </div>
+    <div class="line active"></div>
+    <div class="step inactive">
+      <div class="circle">2</div>
+      <div class="label">Flight Selection</div>
+    </div>
+    <div class="line active"></div>
+    <div class="step inactive">
+      <div class="circle">3</div>
+      <div class="label">Passenger Info</div>
+    </div>
+    <div class="line active"></div>
+    <div class="step">
+      <div class="circle">4</div>
+      <div class="label">Summary</div>
+    </div>
+  </div>
+
+  <!-- Summary Section -->
+  <div class="summary-container">
+    <h2>Booking Summary</h2>
+
+    <div class="section" id="bookingDetails"></div>
+    <div class="section" id="flightDetails"></div>
+    <div class="section" id="passengerDetails"></div>
+
+    <button id="confirmBtn">Confirm Booking</button>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+  <script src="js/summary.js"></script>
+
+</body>
+</html>

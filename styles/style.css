@@ -24,7 +24,7 @@ nav ul li a.links:hover::after {width: 100%;}
   line-height: 40px; border-radius: 25px; text-decoration: none; }
 
 /* SHOWCASE */
-.showcase {background: url('jampil.jpg') no-repeat center center/cover;
+.showcase {background: url('/assets/images/jampil.jpg') no-repeat center center/cover;
   max-width: 1450px; height: 85vh;color: #fff;position: relative;margin: 0 auto;border-radius: 35px;}
 
 .showcase-container {
