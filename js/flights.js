@@ -1,4 +1,3 @@
-// flights.js
 const flightSchedules = [
   // Manila → Cebu
   { no: "5J 560", from: "Manila", to: "Cebu", departTime: "10:00 AM", arriveTime: "11:30 AM", price: 3999, seats: 8, fare: "Promo Fare", duration: "1h 30m" },

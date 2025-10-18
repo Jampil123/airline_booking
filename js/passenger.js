@@ -1,12 +1,9 @@
-// passenger.js
-
 const bookingData = getData("bookingData");
 const departFlight = getData("selectedDepartFlight");
 const returnFlight = getData("selectedReturnFlight");
 const form = document.getElementById("passengerForm");
 const flightSummary = document.getElementById("flightSummary");
 
-// 🧾 1️⃣ Display Flight Summary
 if (!bookingData) {
   flightSummary.innerHTML = "⚠️ No booking found. Please start over.";
 } else {
@@ -40,7 +37,6 @@ if (!bookingData) {
   flightSummary.innerHTML = summaryHTML;
 }
 
-// 🧾 2️⃣ Handle Passenger Form Submission
 form.addEventListener("submit", (e) => {
   e.preventDefault();
 
@@ -53,9 +49,7 @@ form.addEventListener("submit", (e) => {
 
   const passengerInfo = { name, age, email, contact };
 
-  // Save to localStorage
   saveData("passengerInfo", passengerInfo);
 
-  // Redirect to summary page
   redirectTo("summary.html");
 });

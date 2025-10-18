@@ -1,11 +1,8 @@
-// flight.js
-
 const bookingData = getData("bookingData");
 const departContainer = document.getElementById("departFlights");
 const returnContainer = document.getElementById("returnFlights");
 const summaryElement = document.getElementById("bookingSummary");
 
-// 1️⃣ Display booking summary
 if (!bookingData) {
   summaryElement.innerHTML = "⚠️ No booking data found. Please go back to the Booking page.";
 } else {
@@ -18,13 +15,11 @@ if (!bookingData) {
   `;
 }
 
-// 2️⃣ Filter Departing Flights
 const departFlights = flightSchedules.filter(f =>
   f.from.toLowerCase() === bookingData.from.toLowerCase() &&
   f.to.toLowerCase() === bookingData.to.toLowerCase()
 );
 
-// 3️⃣ Filter Return Flights (only if Round Trip)
 let returnFlights = [];
 if (bookingData.trip === "round") {
   returnFlights = flightSchedules.filter(f =>
@@ -33,7 +28,6 @@ if (bookingData.trip === "round") {
   );
 }
 
-// 4️⃣ Render Departing Flights
 if (departFlights.length === 0) {
   departContainer.innerHTML = `<p style="text-align:center;color:#777;">No departing flights found.</p>`;
 } else {
@@ -69,7 +63,6 @@ if (departFlights.length === 0) {
   });
 }
 
-// 5️⃣ Render Return Flights (if Round Trip)
 if (bookingData.trip === "round") {
   if (returnFlights.length === 0) {
     returnContainer.innerHTML = `<p style="text-align:center;color:#777;">No return flights found.</p>`;

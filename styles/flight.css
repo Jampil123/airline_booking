@@ -1,0 +1,43 @@
+body {font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; background-color: #f9f9f9; margin: 0; padding: 0; display: flex; flex-direction: column; align-items: center;}
+
+.progress-container {display: flex; align-items: center; justify-content: center; margin-top: 40px;}
+
+.step {display: flex; flex-direction: column; align-items: center; width: 150px; position: relative; text-align: center;}
+
+.circle {width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; color: white;}
+
+.label {margin-top: 10px; font-weight: 600;}
+
+.active .circle {background-color: #0d8ecf;}
+
+.inactive .circle {background-color: #e0e0e0;}
+
+.active .label {color: #0d8ecf;}
+
+.inactive .label {color: #999;}
+
+.line {height: 3px; width: 100px; background-color: #e0e0e0;}
+
+.line.active {background-color: #0d8ecf;}
+
+.flight-container {background: #fff; padding: 30px; border-radius: 16px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); margin-top: 40px; width: 800px; max-width: 90%;}
+
+.flight-container h2 {text-align: center; color: #0d8ecf; margin-bottom: 10px;}
+
+.summary {text-align: center; margin-bottom: 25px; color: #555;}
+
+.flight-card {border: 1px solid #ddd; border-radius: 12px; padding: 15px 20px; margin-bottom: 15px; display: flex; justify-content: space-between; align-items: center; transition: 0.3s;}
+
+.flight-card:hover {border-color: #0d8ecf; box-shadow: 0 3px 8px rgba(0,0,0,0.1);}
+
+.flight-info h3 {color: #0d8ecf; margin: 0;}
+
+.flight-info p {margin: 2px 0; font-size: 14px; color: #555;}
+
+.price {text-align: right;}
+
+.price h4 {color: #0d8ecf; margin: 0;}
+
+button.select-btn {background-color: #0d8ecf; border: none; color: #fff; padding: 8px 16px; border-radius: 6px; cursor: pointer; transition: 0.3s;}
+
+button.select-btn:hover {background-color: #0b7ab1;}

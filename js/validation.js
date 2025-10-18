@@ -1,6 +1,3 @@
-// validation.js
-
-// Booking form validation logic
 function validateBookingForm(from, to, trip, depart, ret) {
   if (!from || !to || !depart) {
     alert("Please fill in all required fields.");
@@ -13,7 +10,6 @@ function validateBookingForm(from, to, trip, depart, ret) {
   return true;
 }
 
-// passenger form validation logic
 function validatePassengerForm(name, age, email, contact) {
   if (!name || !age || !email || !contact) {
     alert("Please fill in all passenger fields.");

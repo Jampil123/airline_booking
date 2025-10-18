@@ -1,17 +1,12 @@
-// summary.js
-
-// Retrieve data from localStorage
 const bookingData = JSON.parse(localStorage.getItem("bookingData"));
 const departFlight = JSON.parse(localStorage.getItem("selectedDepartFlight"));
 const returnFlight = JSON.parse(localStorage.getItem("selectedReturnFlight"));
 const passenger = JSON.parse(localStorage.getItem("passengerInfo"));
 
-// Elements
 const bookingSection = document.getElementById("bookingDetails");
 const flightSection = document.getElementById("flightDetails");
 const passengerSection = document.getElementById("passengerDetails");
 
-// 1️⃣ Booking Details
 if (bookingData) {
   bookingSection.innerHTML = `
     <h3>Booking Details</h3>
@@ -24,7 +19,6 @@ if (bookingData) {
   `;
 }
 
-// 2️⃣ Flight Details
 if (departFlight) {
   flightSection.innerHTML = `
     <h3>Flight Details</h3>
@@ -42,7 +36,6 @@ if (departFlight) {
   }
 }
 
-// 3️⃣ Passenger Info
 if (passenger) {
   passengerSection.innerHTML = `
     <h3>Passenger Information</h3>

@@ -6,7 +6,7 @@
     <title>AshPhil Travel</title>
 
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
 </head>
@@ -16,12 +16,13 @@
     <header>
         <div class="head-container">
             <h1>AshPhil</h1>
+
             <nav>
                 <ul>
                     <li><a class="links" href="#">HOME</a></li>
-                    <li><a class="links" href="#menu">ABOUT</a></li>
-                    <li><a class="links" href="#">TOUR</a></li>
-                    <li><a class="links" href="#specialty">PACKAGE</a></li>
+					<li><a class="links" href="#tours">TOUR</a></li>
+                    <li><a class="links" href="#promo">PACKAGE</a></li>
+					<li><a class="links" href="#about">ABOUT</a>
                     <li><a class="links" href="#contact">CONTACT</a></li>                
                 </ul>   
             </nav>
@@ -41,30 +42,31 @@
     </section>
 
     <!-- Popular Destination Section -->
-    <section class="popular-destination">
+    <section class="popular-destination" id="tours">
         <div class="destination-header">
             <h2>Popular Destination</h2>
             <p>Unleash Your Wanderlust With SkyWings</p>
+
         </div>
 
         <div class="destination-cards">
             <div class="destination-card">
                 <span class="rating">★ 4.7</span>
-                <img src="/assets/images/place1.jpg" alt="Taal Volcano">
+                <img src="assets/images/place1.jpg" alt="Taal Volcano">
                 <h3>Taal Volcano</h3>
                 <p><i class="fas fa-map-marker-alt"></i> Batangas, Philippines</p>
             </div>
 
             <div class="destination-card">
                 <span class="rating">★ 4.7</span>
-                <img src="/assets/images/place4.jpg" alt="El Nido">
+                <img src="assets/images/place4.jpg" alt="El Nido">
                 <h3>El Nido</h3>
                 <p><i class="fas fa-map-marker-alt"></i> Palawan, Philippines</p>
             </div>
 
             <div class="destination-card">
                 <span class="rating">★ 4.7</span>
-                <img src="/assets/images/place3.jpg" alt="Kawasan Falls">
+                <img src="assets/images/place3.jpg" alt="Kawasan Falls">
                 <h3>Kawasan Falls</h3>
                 <p><i class="fas fa-map-marker-alt"></i> Cebu, Philippines</p>
             </div>
@@ -104,10 +106,9 @@
     </section>
 
     <!-- Promo Section -->
-    <section class="promo-section" aria-label="Hero promo">
+    <section class="promo-section" aria-label="Hero promo" id="promo">
         <div class="promo-inner">
 
-            <!-- Left Image -->
             <div class="promo-left">
                 <div class="image-wrap">
                     <img src="https://picsum.photos/420/520?random=39" alt="happy child on beach">
@@ -118,7 +119,6 @@
                 </div>
             </div>
 
-            <!-- Right Content -->
             <div class="promo-right">
                 <h1 class="promo-title">
                     UNLEASH WANDERLUST WITH
@@ -126,11 +126,11 @@
                 </h1>
 
                 <p class="promo-sub">
-                    Travelling is a wonderful way to explore new places, learn about different cultures,
-                    and gain unique experiences. Let us make your journey effortless and unforgettable.
+                    Travelling is a wonderful way to explore new places, learn about different cultures, and gain unique experiences. 
+					Let us make your journey effortless and unforgettable.
                 </p>
 
-                <a class="cta-btn" href="#">
+                <a class="cta-btn" href="booking.html">
                     Book A Flight Now
                     <span class="arrow">→</span>
                 </a>
@@ -140,7 +140,7 @@
     </section>
 
     <!-- About Section -->
-    <section class="about-section">
+    <section class="about-section" id="about">
         <div class="about-container">
 
             <div class="about-header">
@@ -235,12 +235,12 @@
                 <div class="testimonial-card">
                     <div class="stars">★★★★★</div>
                     <p>
-                        "I had fantastic time traveling to the mountains. The hotel service and the food were excellent, making my stay truly memorable."
+                        "I had fantastic time traveling to the mountains. The hotel service and the food were excellent."
                     </p>
                     <div class="reviewer">
-                        <img src="/assets/images/p3.jpg" alt="Avatar">
+                        <img src="assets/images/pp2.jpg" alt="Avatar">
                         <div>
-                            <h4>Ashpil Soon</h4>
+                            <h4>Ashley Balbon</h4>
                             <span>Traveler Enthusiast</span>
                         </div>
                     </div>
@@ -252,9 +252,9 @@
                         "Absolutely loved the beach resort! Everything was perfect and the staff made my vacation unforgettable."
                     </p>
                     <div class="reviewer">
-                        <img src="/assets/images/p2.jpg" alt="Avatar">
+                        <img src="assets/images/pp1.jpg" alt="Avatar">
                         <div>
-                            <h4>Ashley Balbon</h4>
+                            <h4>AshPhil</h4>
                             <span>Travel Blogger</span>
                         </div>
                     </div>
@@ -266,7 +266,7 @@
                         "Great experience visiting the city. The guided tours were informative, and the food scene is amazing."
                     </p>
                     <div class="reviewer">
-                        <img src="/assets/images/p1.jpg" alt="Avatar">
+                        <img src="assets/images/pp3.jpg" alt="Avatar">
                         <div>
                             <h4>John Phil Esconde</h4>
                             <span>Adventure Seeker</span>
@@ -279,11 +279,11 @@
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer" id="contact">
         <div class="footer-container">
             <div class="footer-logo">
-                <img src="logo.png" alt="Company Logo" />
-                <p>© 2025 YourCompany. All rights reserved.</p>
+                <img src="assets/images/logo.png" alt="Company Logo" />
+                <p>© 2025 Ashphil Airlines. All rights reserved.</p>
             </div>
 
             <div class="footer-links">
@@ -313,6 +313,7 @@
                     </ul>
                 </div>
             </div>
+			
 
             <div class="footer-social">
                 <a href="#"><i class="fab fa-facebook"></i></a>
