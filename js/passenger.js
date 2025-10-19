@@ -4,6 +4,8 @@ const returnFlight = getData("selectedReturnFlight");
 const form = document.getElementById("passengerForm");
 const flightSummary = document.getElementById("flightSummary");
 
+// document.getElementById("flightSummary").style.display = "none";
+
 if (!bookingData) {
   flightSummary.innerHTML = "⚠️ No booking found. Please start over.";
 } else {
@@ -37,19 +39,52 @@ if (!bookingData) {
   flightSummary.innerHTML = summaryHTML;
 }
 
+const passengerCount = parseInt(bookingData?.passengers || 1);
+if (passengerCount > 1) {
+  const originalFormContent = document.querySelector("#passengerForm").innerHTML;
+  const formFields = originalFormContent.replace(/<button[^>]*>.*?<\/button>/, '');
+  
+  let formHTML = '';
+
+  for (let i = 1; i <= passengerCount; i++) {
+    formHTML += `
+      <div class="passenger-block">
+        <h3>Passenger ${i}</h3>
+        ${formFields
+          .replace(/id="/g, `id="passenger${i}_`)
+          .replace(/name="/g, `name="passenger${i}_`)}
+      </div>
+    `;
+  }
+  formHTML += `
+    <div class="form-group">
+      <button type="submit" class="submit-btn">Proceed to Summary</button>
+    </div>
+  `;
+
+  document.getElementById("passengerForm").innerHTML = formHTML;
+}
+
+
 form.addEventListener("submit", (e) => {
   e.preventDefault();
 
-  const name = document.getElementById("fullName").value.trim();
-  const age = parseInt(document.getElementById("age").value);
-  const email = document.getElementById("email").value.trim();
-  const contact = document.getElementById("contact").value.trim();
+  const passengerCount = parseInt(bookingData?.passengers || 1);
+  const passengers = [];
 
-  if (!validatePassengerForm(name, age, email, contact)) return;
+  for (let i = 1; i <= passengerCount; i++) {
+    const prefix = passengerCount > 1 ? `passenger${i}_` : '';
+    
+    const name = document.getElementById(`${prefix}fullName`).value.trim();
+    const age = parseInt(document.getElementById(`${prefix}age`).value);
+    const email = document.getElementById(`${prefix}email`).value.trim();
+    const contact = document.getElementById(`${prefix}contact`).value.trim();
 
-  const passengerInfo = { name, age, email, contact };
+    if (!validatePassengerForm(name, age, email, contact)) return;
 
-  saveData("passengerInfo", passengerInfo);
+    passengers.push({ name, age, email, contact });
+  }
 
+  saveData("passengerInfo", passengers);
   redirectTo("summary.html");
 });

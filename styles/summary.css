@@ -28,6 +28,65 @@ button {width: 100%; padding: 10px; border: none; background-color: #0d8ecf; col
 
 button:hover {background-color: #0b7ab1;}
 
+/* Add these to your existing summary.css */
+.section {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background: #fafafa;
+}
+
+.flight-card, .passenger-card {
+  background: white;
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 6px;
+  border-left: 4px solid #007bff;
+}
+
+.price-summary {
+  background: #e8f4ff;
+  padding: 1rem;
+  border-radius: 6px;
+  margin-top: 1rem;
+}
+
+.info-item {
+  margin: 0.5rem 0;
+  padding: 0.25rem 0;
+}
+
+.info-item.total {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #2c5aa0;
+  border-top: 2px solid #007bff;
+  padding-top: 0.5rem;
+  margin-top: 1rem;
+}
+
+.error {
+  color: #d32f2f;
+  font-style: italic;
+}
+
+#confirmBtn {
+  background: #28a745;
+  color: white;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.1em;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 2rem;
+}
+
+#confirmBtn:hover {
+  background: #218838;
+}
+
 @media (max-width: 480px) {
   .summary-container {width: 90%; padding: 20px;}
   .progress-container {flex-direction: column;}
